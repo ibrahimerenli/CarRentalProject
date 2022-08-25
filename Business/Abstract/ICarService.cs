@@ -1,16 +1,18 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess;
+using Core.Utilities.Results;
 using Entities.Concrete;
-using System;
+using Entities.DTOs;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text;
 
 namespace Business.Abstract
 {
-    public interface ICarService : IEntityRepository<Car>
+    public interface ICarService
     {
+        IResult Add(Car car);
+        IDataResult<List<Car>> GetCarsByBrandId(int id);
+        IDataResult<List<Car>> GetCarsByColorId(int id);
+        IDataResult<List<Car>> GetAll();
+        IDataResult<List<CarDetailDto>> GetCarsDetails();
         
-        List<Car> GetCarsByBrandId(int id);
-        List<Car> GetCarsByColorId(int id);
     }
 }
