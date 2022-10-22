@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.DataAccess.EntityFramework;
 using Entities.DTOs;
+using DataAccess.Concrete.EntityFramework.Context;
 
 namespace DataAccess.Concrete.EntityFramework
 {
